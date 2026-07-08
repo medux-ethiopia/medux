@@ -2,9 +2,9 @@
 
 [![3D portfolio preview (click to watch video)](./Screenshot_2026-04-08_22-10-00.png)](./screen-capture%20(13).webm)
 
-A modern, high-performance **3D developer portfolio website** built with **React**, **TypeScript**, **Three.js**, **GSAP**, and **WebGL**.
+A modern, high-performance **3D Medux portfolio website** built with **React**, **TypeScript**, **Three.js**, **GSAP**, and **WebGL**.
 
-If you’re a developer looking for a **portfolio template** that feels premium, interactive, and memorable—this repo is for you.
+If you’re a Medux looking for a **portfolio template** that feels premium, interactive, and memorable—this repo is for you.
 
 > Live preview: https://www.medux.w11ypec.org
 
@@ -16,7 +16,7 @@ If you’re a developer looking for a **portfolio template** that feels premium,
 - Smooth animations with **GSAP**
 - Modern **React + TypeScript** codebase
 - Fast, responsive UI (desktop + mobile)
-- Designed for developers, engineers, programmers, and creators
+- Designed for Meduxs, engineers, programmers, and creators
 
 ---
 
@@ -90,7 +90,7 @@ If you found this useful:
 
 Add these topics to improve GitHub search visibility:
 
-`portfolio` `developer-portfolio` `portfolio-website` `portfolio-template` `3d-portfolio` `react` `typescript` `threejs` `webgl` `gsap` `frontend` `vite`
+`portfolio` `Medux-portfolio` `portfolio-website` `portfolio-template` `3d-portfolio` `react` `typescript` `threejs` `webgl` `gsap` `frontend` `vite`
 
 ---
 
