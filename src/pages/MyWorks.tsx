@@ -1,37 +1,50 @@
 import { Link } from "react-router-dom";
-import { config } from "../config";
+import { MdArrowOutward } from "react-icons/md";
+import { featuredProjects } from "../data/projects";
 import "./MyWorks.css";
 
 const MyWorks = () => {
   return (
-    <div className="myworks-page">
-      <div className="myworks-header">
+    <main className="myworks-page">
+      <header className="myworks-header">
         <Link to="/" className="back-button" data-cursor="disable">
           ← Back to Home
         </Link>
         <h1>
-          All <span>Works</span>
+          Our <span>Projects</span>
         </h1>
-        <p>A collection of all my projects and creations</p>
-      </div>
+        <p>Explore the technology powering more connected healthcare.</p>
+      </header>
 
-      <div className="myworks-grid">
-        {config.projects.map((project, index) => (
-          <div className="myworks-card" key={project.id} data-cursor="disable">
-            <div className="myworks-card-number">0{index + 1}</div>
+      <section className="myworks-grid" aria-label="Featured MedUX projects">
+        {featuredProjects.map((project, index) => (
+          <a
+            className="myworks-card"
+            key={project.id}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Explore ${project.title} (opens in a new tab)`}
+            data-cursor="disable"
+          >
+            <span className="myworks-card-number">0{index + 1}</span>
             <div className="myworks-card-image">
-              <img src={project.image} alt={project.title} />
+              <img src={project.image} alt="" />
             </div>
             <div className="myworks-card-info">
-              <h3>{project.title}</h3>
+              <div className="myworks-card-heading">
+                <h2>{project.title}</h2>
+                <MdArrowOutward aria-hidden="true" />
+              </div>
               <p className="myworks-card-category">{project.category}</p>
               <p className="myworks-card-description">{project.description}</p>
               <p className="myworks-card-tech">{project.technologies}</p>
+              <span className="myworks-card-cta">Explore project</span>
             </div>
-          </div>
+          </a>
         ))}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 
