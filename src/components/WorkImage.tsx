@@ -11,6 +11,7 @@ interface Props {
 const WorkImage = (props: Props) => {
   const [isVideo, setIsVideo] = useState(false);
   const [video, setVideo] = useState("");
+
   const handleMouseEnter = async () => {
     if (props.video) {
       setIsVideo(true);
@@ -29,10 +30,12 @@ const WorkImage = (props: Props) => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={() => setIsVideo(false)}
         target="_blank"
-        data-cursor={"disable"}
+        rel="noopener noreferrer"
+        aria-label={props.link ? `Open ${props.alt} project (opens in a new tab)` : props.alt}
+        data-cursor="disable"
       >
         {props.link && (
-          <div className="work-link">
+          <div className="work-link" aria-hidden="true">
             <MdArrowOutward />
           </div>
         )}
